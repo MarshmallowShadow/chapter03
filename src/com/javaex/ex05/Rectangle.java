@@ -29,7 +29,9 @@ public class Rectangle {
 	}
 	
 	public boolean equals(Rectangle r) {
-		if(this.width == r.width && this.height == r.height) {
+		int area1 = this.width * this.height;
+		int area2 = r.getWidth() * r.getHeight();
+		if(area1 == area2) {
 			return true;
 		} else {
 			return false;

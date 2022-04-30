@@ -1,5 +1,7 @@
 package com.javaex.ex03;
 
+import java.util.Objects;
+
 public class Point {
 	private int x;
 	private int y;
@@ -23,8 +25,11 @@ public class Point {
 	public void setY(int y) {
 		this.y = y;
 	}
-	
-	
+	@Override
+	public int hashCode() {
+		return Objects.hash(x, y);
+	}
+	@Override
 	public boolean equals(Object obj) {
 		Point p = (Point)obj; 
 		if(this.x == p.x && this.y == p.y) {
@@ -33,5 +38,6 @@ public class Point {
 			return false;
 		}
 	}
+	
 	
 }
